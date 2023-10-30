@@ -1,0 +1,26 @@
+{
+    "left_title": [
+        "THE LEFT TITLE",
+        "Several lines"
+    ],
+    "right_title": [
+        "THE RIGHT TITLE",
+        "Several lines"
+    ],
+    "event_description": [
+        "Date of the lottery",
+        "2023/10/31 Halloween night - The Graveyard"
+    ],
+    "prize_title": [
+        "List of prizes",
+        "description"
+    ],
+    "prize_list": [
+        "* 1st prize",
+        "* 2nd prize",
+        "* 3rd prize"
+    ],
+    "price": "Price: 1€",
+    "buyer": "Buyer name",
+    "seller": "Seller name"
+}

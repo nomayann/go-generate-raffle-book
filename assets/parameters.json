@@ -1,0 +1,199 @@
+{
+  "generalDirectives": {
+    "SetCreator": "TCPDF",
+    "SetAuthor": "Yann Chauvel",
+    "SetTitle": "Carnet de Tickets de tombola",
+    "SetSubject": "Tickets générés et numérotés",
+    "SetAutoPageBreak": false,
+    "setFontSubsetting": true,
+    "setPrintHeader": false,
+    "setPrintFooter": false,
+    "margins": {
+      "left": 0,
+      "top": 0,
+      "right": 0
+    }
+  },
+  "templateDirectives": {
+    "leftTitle": {
+      "texts": [
+        "Left title 1",
+        "Left title 2"
+      ],
+      "width": 65,
+      "align": "CM",
+      "font": {
+        "family": "ubuntu",
+        "style": "R",
+        "size": 13
+      },
+      "position": {
+        "x": 10,
+        "y": 10
+      }
+    },
+    "rightTitle": {
+      "texts": [
+        "right title 1",
+        "right title 2"
+      ],
+      "width": 115,
+      "align": "CM",
+      "font": {
+        "family": "ubuntu",
+        "style": "",
+        "size": 13
+      },
+      "position": {
+        "x": 85,
+        "y": 10
+      }
+    },
+    "eventDescription": {
+      "texts": [
+        "description 1",
+        "description 2"
+      ],
+      "width": 115,
+      "align": "CM",
+      "font": {
+        "family": "ubuntu",
+        "style": "",
+        "size": 12
+      },
+      "position": {
+        "x": 85,
+        "y": 26
+      }
+    },
+    "prizeTitle": {
+      "texts": [
+        "title 1",
+        "title 2"
+      ],
+      "width": 113,
+      "align": "LT",
+      "font": {
+        "family": "ubuntu",
+        "style": "B",
+        "size": 13
+      },
+      "position": {
+        "x": 86,
+        "y": 39
+      }
+    },
+    "prizeList": {
+      "texts": [
+        "prize 1",
+        "prize 2",
+        "etc."
+      ],
+      "width": 113,
+      "align": "LT",
+      "font": {
+        "family": "ubuntu",
+        "style": "RI",
+        "size": 12
+      }
+    },
+    "price": {
+      "text": "Price: to be defined",
+      "font": {
+        "family": "ubuntu",
+        "style": "",
+        "size": 15
+      },
+      "position": {
+        "x": 85,
+        "y": 93
+      }
+    },
+    "seller": {
+      "text": "Nom du vendeur",
+      "font": {
+        "family": "ubuntu",
+        "style": "",
+        "size": 12
+      },
+      "position": {
+        "x": 10,
+        "y": 35
+      }
+    },
+    "buyer": {
+      "text": "Nom de l'acheteur",
+      "font": {
+        "family": "ubuntu",
+        "style": "",
+        "size": 12
+      },
+      "position": {
+        "x": 10,
+        "y": 60
+      }
+    },
+    "verticalLine": {
+      "dashPattern": [
+        2,
+        2
+      ],
+      "x1": 80,
+      "x2": 80,
+      "y1": 8,
+      "y2": 91.9
+    },
+    "cutLine": {
+      "dashPattern": [
+        2,
+        102
+      ],
+      "x1": 0,
+      "x2": 210,
+      "y1": 99.9,
+      "y2": 99.9
+    },
+    "buyerLine": {
+      "dashPattern": [
+        0.2,
+        1
+      ],
+      "x1": 10,
+      "x2": 75,
+      "y1": 50,
+      "y2": 50
+    },
+    "sellerLine": {
+      "dashPattern": [
+        0.2,
+        1
+      ],
+      "x1": 10,
+      "x2": 75,
+      "y1": 75,
+      "y2": 75
+    },
+    "rectEvent": {
+      "dashPattern": [
+        1,
+        0
+      ],
+      "x": 85,
+      "y": 25,
+      "w": 115,
+      "h": 10,
+      "style": "D"
+    },
+    "rectPrize": {
+      "dashPattern": [
+        1,
+        0
+      ],
+      "x": 85,
+      "y": 37,
+      "w": 115,
+      "h": 45,
+      "style": "D"
+    }
+  }
+}

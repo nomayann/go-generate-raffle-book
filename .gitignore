@@ -6,3 +6,8 @@
 *.iws
 *.iml
 *.ipr
+
+# App pdfs
+
+build/*.pdf
+assets/customs.json
