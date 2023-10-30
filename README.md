@@ -1,5 +1,8 @@
 # Rafle book generator
 
+# Other languages
+* [French version](docs/doc-fr.md)
+
 # Purpose
 Easily generate customizable raffle books using a CLI.
 * 3 tickets per page
@@ -11,12 +14,19 @@ Easily generate customizable raffle books using a CLI.
 * Linux: `bin/generate-raffle-book-amd64-linux`
 * MacOS: `bin/generate-raffle-book-amd64-darwin`
 
+### PDF file
+The generated file is located in `build/tickets.json` path
+
 ### Standard (adapt to your OS)
-`bin/generate-raffle-book-amd64-windows`
+```bash
+bin/generate-raffle-book-amd64-windows
+```
 Generates 12 books aka. 120 tickets
 
 ### Extra params for custom numbering
-`bin/generate-raffle-book-amd64-windows -start=120 -count=100`
+```bash
+bin/generate-raffle-book-amd64-windows -start=120 -count=100
+```
 Gerenates 100 books, starting at 120.
 
 The start and count are rounded to upper closest (starts at 121, creates 102 books) numbers to keep the numbering continuous
@@ -25,10 +35,10 @@ The start and count are rounded to upper closest (starts at 121, creates 102 boo
 ## What you cannot customize
 
 All the texts are customizable except the numbers (N° 0XXXX)
-![Not customizable](doc/images/not-customizable.png)
+![Not customizable](docs/images/not-customizable.png)
 
 ## What you can customize
-![Customizabe](doc/images/customizable.png)
+![Customizabe](docs/images/customizable.png)
 
 ## How you can do it
 copy `assets/customs.json.dist` to `assets.customs.json`
