@@ -21,15 +21,15 @@ The generated file is located in `build/tickets.json` path
 ```bash
 bin/generate-raffle-book-amd64-windows
 ```
-Generates 12 books aka. 120 tickets
+Generates 12 books i.e. 120 tickets
 
 ### Extra params for custom numbering
 ```bash
 bin/generate-raffle-book-amd64-windows -start=120 -count=100
 ```
-Gerenates 100 books, starting at 120.
+Gerenates 100 tickets, starting at 120.
 
-The start and count are rounded to upper closest (starts at 121, creates 102 books) numbers to keep the numbering continuous
+The start and count are rounded to upper closest (actual start is 121, creates 120 tickets i.e. 12 books) numbers to keep the numbering continuous
 
 ## How-to customize ?
 ## What you cannot customize

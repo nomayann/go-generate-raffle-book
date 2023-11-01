@@ -28,7 +28,7 @@ bin/generate-raffle-book-amd64-windows -start=120 -count=100
 ```
 Génère 100 carnets, en commençant à 120.
 
-Le début et le compte sont arrondis au nombre supérieur le plus proche (commence à 121, crée 102 carnets) pour maintenir la continuité de la numérotation.
+Le début et le compte sont arrondis au nombre supérieur le plus proche (commence à 121, crée 12 carnets, soit 120 tickets) pour maintenir la continuité de la numérotation.
 
 Comment personnaliser ?
 Ce que vous ne pouvez pas personnaliser
