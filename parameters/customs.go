@@ -6,6 +6,17 @@ import (
 	"os"
 )
 
+type Customs struct {
+	LeftTitle        []string `json:"left_title,omitempty"`
+	RightTile        []string `json:"right_title,omitempty"`
+	EventDescription []string `json:"event_description,omitempty"`
+	PrizeTitle       []string `json:"prize_title,omitempty"`
+	PrizeList        []string `json:"prize_list,omitempty"`
+	Price            string   `json:"price,omitempty"`
+	Buyer            string   `json:"buyer,omitempty"`
+	Seller           string   `json:"seller,omitempty"`
+}
+
 func LoadCustoms(path string) (Customs, error) {
 	if _, err := os.Stat(path); err != nil {
 		fmt.Printf("no %s file exists. Generating without customization\n", path)
@@ -25,13 +36,3 @@ func LoadCustoms(path string) (Customs, error) {
 	return customs, nil
 }
 
-type Customs struct {
-	LeftTitle        []string `json:"left_title,omitempty"`
-	RightTile        []string `json:"right_title,omitempty"`
-	EventDescription []string `json:"event_description,omitempty"`
-	PrizeTitle       []string `json:"prize_title,omitempty"`
-	PrizeList        []string `json:"prize_list,omitempty"`
-	Price            string   `json:"price,omitempty"`
-	Buyer            string   `json:"buyer,omitempty"`
-	Seller           string   `json:"seller,omitempty"`
-}
