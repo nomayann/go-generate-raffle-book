@@ -36,3 +36,16 @@ func LoadCustoms(path string) (Customs, error) {
 	return customs, nil
 }
 
+func CreateBoilerPlateCustoms() Customs {
+	return Customs{
+		LeftTitle:        []string{"left title", "next"},
+		RightTile:        []string{"right title", "next"},
+		EventDescription: []string{"event description", "next"},
+		PrizeTitle:       []string{"prize title"},
+		PrizeList:        []string{"* 1st prize", "* 2nd prize"},
+		Buyer:            "Buyer name",
+		Seller:           "Seller name",
+		Price:            "1€",
+	}
+}
+

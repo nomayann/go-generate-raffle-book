@@ -51,3 +51,18 @@ type Parameters struct {
 	GeneralDirectives  GeneralDirectives  `json:"generalDirectives"`
 	TemplateDirectives TemplateDirectives `json:"templateDirectives"`
 }
+
+func LoadParametersWithCustom(paramPath string, customPath string) (Parameters, error) {
+	parameters, err := LoadParameters("assets/parameters.json")
+	if err != nil {
+		return parameters, err
+	}
+	customs, err := LoadCustoms(customPath)
+	if err != nil {
+		return parameters, err
+	}
+
+	parameters.Customize(customs)
+
+	return parameters, nil
+}

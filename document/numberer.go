@@ -17,6 +17,12 @@ func (n Numberer) GetTicketsPerPage() uint16 {
 	return n.ticketsPerPage
 }
 
+func (n Numberer) GetFirstLastAndCount() (uint16, uint16, uint16) {
+	count := n.batchCount * n.ticketsPerBatch
+	last := n.firstTicketIndex + count - 1
+	return n.firstTicketIndex, last, count
+}
+
 func (n Numberer) GetNumbering() [][]uint16 {
 	res := make([][]uint16, int(n.batchCount)*int(n.ticketsPerBook))
 
@@ -63,4 +69,3 @@ func (n *Numberer) handleStartAndCount(StartAt uint16, TicketsCount uint16) {
 	startBatchIndex := math.Floor(float64(n.firstTicketIndex) / float64(n.ticketsPerBatch))
 	n.startBatchIndex = uint16(startBatchIndex)
 }
-

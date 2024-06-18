@@ -3,6 +3,8 @@ package document
 import (
 	"fmt"
 	"generate-raffle-book/parameters"
+	"io/fs"
+	"os"
 
 	"github.com/jung-kurt/gofpdf"
 )
@@ -14,7 +16,8 @@ type Generator struct {
 	Parameters   *parameters.Parameters
 }
 
-func (g *Generator) Generate() {
+func (g *Generator) Generate() (fs.FileInfo, error) {
+	outputPath := "./tickets.pdf"
 	g.Pdf = gofpdf.New("P", "mm", "A4", "")
 	g.initFonts()
 	g.Parameters.GeneralDirectives.Apply(g.Pdf)
@@ -39,13 +42,20 @@ func (g *Generator) Generate() {
 			g.Pdf.Text(175, numberY, fmt.Sprintf(numberFormat, pageNumber))
 		}
 	}
-	err := g.Pdf.OutputFileAndClose("build/tickets.pdf")
+	err := g.Pdf.OutputFileAndClose(outputPath)
 	if err != nil {
 		fmt.Println("Erreur inattendue: ", err.Error())
+		return nil, err
 	}
+
+	stats, err := os.Stat(outputPath)
+	if err != nil {
+		return nil, err
+	}
+	return stats, nil
 }
 
-func (g Generator) initFonts() {
+func (g *Generator) initFonts() {
 	g.Pdf.AddUTF8Font("ubuntu", "", "fonts/ubuntu/Ubuntu-R.ttf")
 	g.Pdf.AddUTF8Font("ubuntu", "B", "fonts/ubuntu/Ubuntu-B.ttf")
 	g.Pdf.AddUTF8Font("ubuntu", "BI", "fonts/ubuntu/Ubuntu-BI.ttf")

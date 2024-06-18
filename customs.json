@@ -1,0 +1,24 @@
+{
+  "left_title": [
+    "left title",
+    "next"
+  ],
+  "right_title": [
+    "right title",
+    "next"
+  ],
+  "event_description": [
+    "event description",
+    "next"
+  ],
+  "prize_title": [
+    "prize title"
+  ],
+  "prize_list": [
+    "* 1st prize",
+    "* 2nd prize"
+  ],
+  "price": "1€",
+  "buyer": "Buyer name",
+  "seller": "Seller name"
+}

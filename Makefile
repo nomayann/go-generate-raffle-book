@@ -2,7 +2,7 @@ APP=generate-raffle-book
 
 .PHONY: build
 build: ## Standard build
-	go build -o bin/${APP} main.go
+	go build -o bin/${APP}
 
 .PHONY: run
 run: ## Run 
@@ -11,9 +11,9 @@ run: ## Run
 .PHONY: compile
 compile: ## Compiling for every OS and Platform
 	@echo "Compiling for every OS and Platform"
-	GOOS=darwin GOARCH=amd64 go build -o bin/${APP}-amd64-darwin main.go
-	GOOS=linux GOARCH=amd64 go build -o bin/${APP}-amd64-linux main.go
-	GOOS=windows GOARCH=amd64 go build -o bin/${APP}-amd64-windows main.go
+	GOOS=darwin GOARCH=amd64 go build -o bin/${APP}-amd64-darwin
+	GOOS=linux GOARCH=amd64 go build -o bin/${APP}-amd64-linux
+	GOOS=windows GOARCH=amd64 go build -o bin/${APP}-amd64-windows
 
 .PHONY: customs
 customs: ## Generate customs.json file

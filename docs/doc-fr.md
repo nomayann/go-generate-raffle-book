@@ -18,16 +18,11 @@ Le fichier généré se trouve dans le chemin `build/tickets.json`
 ```bash
 bin/generate-raffle-book-amd64-windows
 ```
-Génère 12 carnets, soit 120 tickets
-
 Paramètres supplémentaires pour la numérotation personnalisée
 bash
-Copy code
 ```bash
-bin/generate-raffle-book-amd64-windows -start=120 -count=100
+bin/generate-raffle-book-amd64-windows
 ```
-Génère 100 carnets, en commençant à 120.
-
 Le début et le compte sont arrondis au nombre supérieur le plus proche (commence à 121, crée 12 carnets, soit 120 tickets) pour maintenir la continuité de la numérotation.
 
 Comment personnaliser ?
@@ -40,13 +35,10 @@ Ce que vous pouvez personnaliser
 ![Customizabe](docs/images/customizable.png)
 
 
-Comment le faire
-Copiez `assets/customs.json.dist` vers `assets/customs.json`
+## Comment le faire ?
+Lancer le programme. Tapez "2" (`Generate a boilerplate custom file`)
 
-```bash
-make customs
-```
-Maintenant, modifiez le fichier `assets/customs.json` pour qu'il corresponde à vos besoins.
+Modifiez le fichier `customs.json` pour qu'il corresponde à vos besoins.
 
 Exemple 1 : mettez à jour les éléments de texte
 Respectez le format JSON (utilisez [cet outil](https://jsonformatter.curiousconcept.com/) par exemple)
@@ -78,3 +70,11 @@ Respectez le format JSON (utilisez [cet outil](https://jsonformatter.curiousconc
     "vendeur": "Nom du vendeur"
 }
 ```
+
+Revenez au programme et tapez "1" ("Generate a new raffle book")
+
+Tapez le numéro de ticket de départ
+
+Tapez ne nombre de tickets désirés
+
+Les tickets sont générés dans le fichier "tickets.pdf"

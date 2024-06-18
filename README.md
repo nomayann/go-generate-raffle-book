@@ -15,20 +15,18 @@ Easily generate customizable raffle books using a CLI.
 * MacOS: `bin/generate-raffle-book-amd64-darwin`
 
 ### PDF file
-The generated file is located in `build/tickets.json` path
+The generated file is located under `tickets.json` path
 
 ### Standard (adapt to your OS)
 ```bash
 bin/generate-raffle-book-amd64-windows
 ```
-Generates 12 books i.e. 120 tickets
+Follow the prompted instructions
 
 ### Extra params for custom numbering
 ```bash
-bin/generate-raffle-book-amd64-windows -start=120 -count=100
+bin/generate-raffle-book-amd64-windows
 ```
-Gerenates 100 tickets, starting at 120.
-
 The start and count are rounded to upper closest (actual start is 121, creates 120 tickets i.e. 12 books) numbers to keep the numbering continuous
 
 ## How-to customize ?
@@ -41,12 +39,11 @@ All the texts are customizable except the numbers (N° 0XXXX)
 ![Customizabe](docs/images/customizable.png)
 
 ## How you can do it
-copy `assets/customs.json.dist` to `assets.customs.json`
-```bash
-make customs
-```
+Run the program. Type "2" when asked for it (`Generate a boilerplate custom file`)
 
-Now, edit the `assets/customs.json` to fit your need. 
+Confirm if you're asked for it 
+
+Now, edit the `customs.json` file to fit your need. 
 
 ### Example 1: update the texts items 
 
